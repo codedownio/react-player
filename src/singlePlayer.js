@@ -50,7 +50,7 @@ export default function createSinglePlayer (activePlayer) {
       const { style, width, height, wrapper: Wrapper } = this.props
       const otherProps = omit(this.props, SUPPORTED_PROPS, DEPRECATED_CONFIG_PROPS)
       return (
-        <Wrapper style={{ ...style, width, height }} {...otherProps}>
+        <Wrapper style={style} {...otherProps}>
           <Player
             {...this.props}
             ref={this.ref}

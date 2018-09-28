@@ -215,8 +215,8 @@ export class FilePlayer extends Component {
     const useAudio = this.shouldUseAudio(this.props)
     const Element = useAudio ? 'audio' : 'video'
     const style = {
-      width: width === 'auto' ? width : '100%',
-      height: height === 'auto' ? height : '100%'
+      width: width || '100%',
+      height: height || '100%'
     }
     return (
       <Element
