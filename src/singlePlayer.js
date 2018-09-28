@@ -47,7 +47,7 @@ export default function createSinglePlayer (activePlayer) {
       if (!activePlayer.canPlay(this.props.url)) {
         return null
       }
-      const { style, width, height, wrapper: Wrapper } = this.props
+      const { style, wrapper: Wrapper } = this.props
       const otherProps = omit(this.props, SUPPORTED_PROPS, DEPRECATED_CONFIG_PROPS)
       return (
         <Wrapper style={style} {...otherProps}>
